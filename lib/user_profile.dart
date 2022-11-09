@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:sliding_up_panel/sliding_up_panel.dart';
 
 class UserProfile extends StatefulWidget {
   const UserProfile({super.key});
@@ -37,9 +38,28 @@ class _UserProfileState extends State<UserProfile> {
             ),
           ),
 
-            //Sliding Panel
+          //Sliding Panel
 
+          SlidingUpPanel(
+            minHeight: MediaQuery.of(context).size.height * 035,
+            maxHeight: MediaQuery.of(context).size.height * 0.85,
+
+            body: Container(
+              color: Colors.transparent,
+            ),
+            // panelBuilder: (sc) => _pannelBody(controller),
+          )
         ],
+      ),
+    );
+  }
+
+  SingleChildScrollView _pannelBody(ScrollController controller) {
+    return SingleChildScrollView(
+      controller: controller,
+      physics: ClampingScrollPhysics(),
+      child: Column(
+        children: [Container()],
       ),
     );
   }

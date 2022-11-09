@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mdoc/onboardingScreen/onboarding_screen.dart';
+import 'package:mdoc/profile.dart';
 import 'package:mdoc/user_profile.dart';
 
 void main() {
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const UserProfile(),
+      home: Profile(),
     );
   }
 }
