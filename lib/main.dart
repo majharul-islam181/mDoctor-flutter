@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:mdoc/done.dart';
 import 'package:mdoc/onboardingScreen/onboarding_screen.dart';
 import 'package:mdoc/profile.dart';
-import 'package:mdoc/user_profile.dart';
+import 'package:mdoc/screens/login.dart';
+import 'package:mdoc/screens/register.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,7 +30,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: Profile(),
+      home: OnboardScreen(),
     );
   }
 }

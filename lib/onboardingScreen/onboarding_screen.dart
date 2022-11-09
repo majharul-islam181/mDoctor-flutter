@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:lottie/lottie.dart';
 import 'package:mdoc/done.dart';
+import 'package:mdoc/screens/register.dart';
 
 class OnboardScreen extends StatelessWidget {
   const OnboardScreen({super.key});
@@ -31,19 +32,19 @@ class OnboardScreen extends StatelessWidget {
               "https://assets1.lottiefiles.com/packages/lf20_42B8LS.json"),
         )),
       ),
+      // PageViewModel(
+      //   title: "Title of 2 page",//
+      //   body:
+      //       "Here you can write the description of the page, to explain someting...",
+      //   image: Center(
+      //       child: Padding(
+      //     padding: EdgeInsets.only(top: 20.0),
+      //     child: Lottie.network(
+      //         "https://assets5.lottiefiles.com/packages/lf20_iivslabn.json"),
+      //   )),
+      // ),
       PageViewModel(
-        title: "Title of 2 page",
-        body:
-            "Here you can write the description of the page, to explain someting...",
-        image: Center(
-            child: Padding(
-          padding: EdgeInsets.only(top: 20.0),
-          child: Lottie.network(
-              "https://assets5.lottiefiles.com/packages/lf20_iivslabn.json"),
-        )),
-      ),
-      PageViewModel(
-        title: "Title of 3 page",
+        title: "Nearby Doctor",
         body:
             "Here you can write the description of the page, to explain someting...",
         image: Center(
@@ -54,7 +55,7 @@ class OnboardScreen extends StatelessWidget {
         )),
       ),
       PageViewModel(
-        title: "Title of 4 page",
+        title: "Online Consultation - Anytime, Anywhere",
         body:
             "Here you can write the description of the page, to explain someting...",
         image: Center(
@@ -77,8 +78,8 @@ class OnboardScreen extends StatelessWidget {
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         onDone: () {
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => const Done()));
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => RegisterScreen()));
         },
         pages: getpages(),
         showBackButton: false,
